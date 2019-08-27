@@ -1,0 +1,18 @@
+<view class="container">
+  <view wx:for="{{dataSource}}" wx:key="{{index}}" class="item">
+          <image src="{{item.images.small}}" class="img"></image>
+          <view class="content">
+            <view class="title">{{item.title}}</view>
+            <view>主演：
+            <text wx:for="{{item.directors}}" wx:key="{{index}}">{{item.name}}</text>
+            </view>
+            <view>观众评分：{{item.rating.average}}</view>
+            <view>年份：{{item.year}}</view>
+            <view>类型：
+            <text wx:for="{{item.genres}}" wx:key="{{index}}">{{item}} </text>
+            </view>
+          <button class="button" bindtap="toCommon" data-movieId="{{item.id}}">评价</button>
+          </view>
+  </view>
+  <view hidden="{{hasMore}}">到底啦～</view>
+</view>

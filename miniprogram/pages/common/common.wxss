@@ -1,0 +1,76 @@
+.detailsContainer{
+  display:flex;
+  justify-content: space-between;
+  width:100%;
+  box-sizing: border-box;
+  padding:10px;
+  background-size: cover;
+  /* background-color: #fff; */
+}
+.mark{
+  position:absolute;
+  width:100%;
+  height:300rpx;
+  opacity: 0.3;
+  filter:blur(40rpx);
+  z-index: -1;
+  background-color: #fff;
+}
+.img{
+  width:200rpx;
+  height:300rpx;
+}
+.content{
+  flex:1;
+  font-size: 28rpx;
+  padding-left:10px;
+  color:#fff;
+}
+.title{
+  font-size: 30px;
+}
+.summary{
+  font-size: 24rpx;
+  text-indent: 2em;
+  padding:10px;
+  margin-top:10px;
+  background:#fff;
+}
+.commonList{
+  background:#fff;
+  margin:10px 0;
+}
+.commonList .cHeader{
+  display:flex;
+  justify-content: space-between;
+  padding:10px;
+  border-bottom: 1px solid #efefef;
+}
+.commonList .cHeader button{
+  background:red;
+  color:#fff;
+  margin-right:0;
+}
+.commonList .listItem{
+  display:flex;
+  padding:15px 10px;
+  border-bottom: 1px solid #efefef;
+}
+.commonList .listItem .commonHeader{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50%;
+}
+.commonList .listItem .cRight{
+  flex:1;
+  padding-left:10px;
+}
+.commonList .listItem .cRight .rTop{
+  display:flex;
+  font-size:28rpx;
+  justify-content: space-between;
+  margin-bottom:10px;
+}
+.commonList .listItem .cRight .ccontent{
+  font-size: 24rpx;
+}

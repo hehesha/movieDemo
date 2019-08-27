@@ -1,0 +1,32 @@
+<view>
+  <view class="detailsContainer">
+  <view class="mark"  style="background:url({{details.images.small}}) no-repeat top/cover"></view>
+      <image src="{{details.images.small}}" class="img"></image>
+      <view class="content">
+        <view class="title">{{details.title}}</view>
+        <view>上映日期：{{details.pubdate}}</view>
+        <view>评分：{{details.rating.average}}</view>
+        <view>类型：
+        <text wx:for="{{details.genres}}" wx:key="{{index}}">{{item}} </text>  
+        </view>
+        <view>时长：<text wx:for="{{details.durations}}" wx:key="{{index}}">{{item}} </text></view>
+      </view>
+  </view>
+  <view class="summary">{{details.summary}}</view>
+  <view class="commonList">
+    <view class="cHeader">
+      <text>讨论</text>
+      <button size="mini">参与讨论</button>
+    </view>
+    <view wx:for="{{details.popular_comments}}" class="listItem" wx:key="{{index}}">
+      <image class="commonHeader" src="{{item.author.avatar}}"></image>
+      <view class="cRight">
+        <view class="rTop">
+          <view class="name">{{item.author.name}}</view>
+          <view class="cDate">{{item.created_at}}</view>
+        </view>
+        <view class="ccontent">{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+</view>
